@@ -4,10 +4,10 @@ Project based on Tkinter library in Python. This application is built in Python 
 
 ## Here are few screenshots:
 
-![Alt text](Restaurant-Management-System/Restaurant_Management_system_1.PNG)
+![Image1](Restaurant-Management-System/Restaurant_Management_system_1.PNG)
 
 
-![Alt text](Restaurant-Management-System/Restaurant_Management_system_2.PNG)
+![Image2](Restaurant-Management-System/Restaurant_Management_system_2.PNG)
 
 
-![Alt text](Restaurant-Management-System/Restaurant_Management_system_3.PNG)
+![Image3](Restaurant-Management-System/Restaurant_Management_system_3.PNG)
