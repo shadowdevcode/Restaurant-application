@@ -14,7 +14,7 @@ root.geometry("1350x750+0+0")       # Geometric measurement of the system create
 
 root.title("Restaurant Management System")      # Title is set
 
-root.configure(background='black')
+root.configure(background='gray')
 
 
 Tops = Frame(root, width=1350, height=100, bd=14, relief="raise")
@@ -52,9 +52,9 @@ f2ab.pack(side=RIGHT)
 
 # ============================ Configuration set background black ==================================================
 
-Tops.configure(background='black')
-f1.configure(background='black')
-f2.configure(background='black')
+Tops.configure(background='white')
+f1.configure(background='white')
+f2.configure(background='white')
 
 # =========================================== Label Set on Top to Restaurant MS =================================
 
@@ -92,21 +92,21 @@ def CostofItems():
     PriceofCakesandDrinks =(Item9 * 100) + (Item10 * 110) + (Item11 * 100) + (Item12 *110) + (Item13 * 70) + \
                   (Item14 * 70) + (Item15 * 80) + (Item16 * 100)
 
-    FoodPrice = "Rs.", str('%.2f' % PriceofFood)
-    DrinksandCakesPrice = "Rs.", str("%.2f" % PriceofCakesandDrinks)
+    FoodPrice = "Rs "+ str('%.2f' % PriceofFood)
+    DrinksandCakesPrice = "Rs "+ str("%.2f" % PriceofCakesandDrinks)
     CostofFood.set(FoodPrice)
     CostofCakesandDrinks.set(DrinksandCakesPrice)
-    SC = "Rs.", str("%.2f" % 15)
+    SC = "Rs "+ str("%.2f" % 0.15)
     print(SC)
     ServiceCharge.set(SC)
 
-    SubTotalofITEMS = "Rs.", str('%0.2f' % (PriceofFood + PriceofCakesandDrinks + 0.15))
+    SubTotalofITEMS = "Rs "+ str(round(PriceofFood + PriceofCakesandDrinks + 0.15))
     SubTotal.set(SubTotalofITEMS)
 
-    Tax = "Rs.", str('%0.2f' % ((PriceofFood + PriceofCakesandDrinks + 0.15)*5))
+    Tax = "Rs "+ str(round((PriceofFood + PriceofCakesandDrinks + 0.15)*0.05))
     PaidTax.set(Tax)
-    TT = ((PriceofFood + PriceofCakesandDrinks + 0.15)*5)
-    TC = "Rs.", str('%0.2f' % ((PriceofFood + PriceofCakesandDrinks + 0.15) + TT))
+    TT = ((PriceofFood + PriceofCakesandDrinks + 0.15)*0.05)
+    TC = "Rs "+ str(round((PriceofFood + PriceofCakesandDrinks + 0.15) + TT))
     print((TC))
     TotalCost.set(TC)
 
@@ -211,10 +211,10 @@ def Receipt():
     txtReceipt.insert(END, 'Coke: \t\t\t\t\t' + E_Coke.get() + "\n")
     txtReceipt.insert(END, 'Pepsi: \t\t\t\t\t' + E_Pepsi.get() + "\n")
     txtReceipt.insert(END, 'Cappuccino: \t\t\t\t\t' + E_Cappuccino.get() + "\n")
-    txtReceipt.insert(END, 'Cost of Food: \t\t' + CostofFood.get() + "\tTax Paid:\t\t" + PaidTax.get() + "\n")
-    txtReceipt.insert(END, 'Cost of Cakes and Drinks: \t\t\t' + CostofCakesandDrinks.get() + "\tSub Total:\t\t" +
+    txtReceipt.insert(END, 'Cost of Food: \t\t\t\t\t' + CostofFood.get() + "\t\t\tTax Paid:\t\t\t\t\t" + PaidTax.get() + "\n")
+    txtReceipt.insert(END, 'Cost of Cakes and Drinks: \t\t\t\t\t' + CostofCakesandDrinks.get() + "\t\t\tSub Total:\t\t\t\t\t" +
                       SubTotal.get() + "\n")
-    txtReceipt.insert(END, 'Service Charge: \t\t' + ServiceCharge.get() + "\tTotal Cost:\t\t" + TotalCost.get() + "\n")
+    txtReceipt.insert(END, 'Service Charge: \t\t\t\t\t' + ServiceCharge.get() + "\t\t\tTotal Cost:\t\t\t\t\t" + TotalCost.get() + "\n")
 
 
 # ============================================ CheckButton check performed module ====================================
