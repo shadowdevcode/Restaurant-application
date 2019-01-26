@@ -10,32 +10,32 @@ from tkinter import messagebox
 
 root = Tk()
 
-root.geometry("1350x750+0+0")       # Geometric measurement of the system created
+root.geometry("1200x700+0+0")       # Geometric measurement of the system created
 
 root.title("Restaurant Management System")      # Title is set
 
 root.configure(background='gray')
 
 
-Tops = Frame(root, width=1350, height=100, bd=14, relief="raise")
+Tops = Frame(root, width=1250, height=90, bd=12, relief="raise")
 Tops.pack(side=TOP)
 
-f1 = Frame(root, width=900, height=650, bd=8, relief="raise")
+f1 = Frame(root, width=750, height=750, bd=8, relief="raise")
 f1.pack(side=LEFT)
 
-f2 = Frame(root, width=440, height=650, bd=8, relief="raise")
+f2 = Frame(root, width=400, height=950, bd=9, relief="raise")
 f2.pack(side=RIGHT)
 
-f1a = Frame(f1, width=900, height=330, bd=8, relief="raise")
+f1a = Frame(f1, width=900, height=330, bd=6, relief="raise")
 f1a.pack(side=TOP)
 
-f2a = Frame(f1, width=900, height=320, bd=6, relief="raise")
-f2a.pack(side=BOTTOM)
+f2a = Frame(f1, width=850, height=520, bd=6, relief="raise")
+f2a.pack(fill=BOTH, side=BOTTOM)
 
 ft2 = Frame(f2, width=440, height=450, bd=12, relief="raise")
 ft2.pack(side=TOP)
 
-fb2 = Frame(f2, width=440, height=250, bd=16, relief="raise")
+fb2 = Frame(f2, width=440, height=750, bd=16, relief="raise")
 fb2.pack(side=BOTTOM)
 
 f1aa = Frame(f1a, width=400, height=330, bd=16, relief="raise")
@@ -486,14 +486,14 @@ txtCappuccino.grid(row=7, column=1)
 lblReceipt = Label(ft2, font=('arial', 12, 'bold'), text="Receipt", bd=2, anchor='w')
 lblReceipt.grid(row=0, column=0, sticky=W)
 txtReceipt = Text(ft2, width=59, height=22, bg="white", bd=8, font=('arial', 11, 'bold'))
-txtReceipt.grid(row=1, column=0)
+txtReceipt.grid(row=1, column=0, sticky=W+E)
 
 # =================================== Cost Items Information(f2aa) ==================================================
 
 lblCostofFood = Label(f2aa, font=('arial', 16, 'bold'), text="Cost of Food", bd=8)
 lblCostofFood.grid(row=2, column=0, sticky=W)
 txtCostofFood = Entry(f2aa, font=('arial', 16, 'bold'), bd=8, justify="left", textvariable=CostofFood)
-txtCostofFood.grid(row=2, column=1, sticky=W)
+txtCostofFood.grid(row=2, column=1)
 
 lblCostofCakesandDrinks = Label(f2aa, font=('arial', 16, 'bold'), text="Drink & Cake", bd=8)
 lblCostofCakesandDrinks.grid(row=3, column=0, sticky=W)
@@ -526,13 +526,13 @@ txtTotalCost.grid(row=4, column=1, sticky=W)
 # ======================================Button===================================================
 
 btnTotal = Button(fb2, padx=16, pady=1, bd=4, fg="black", font=('arial', 16, 'bold'), width=5,
-                  text="Total", command=CostofItems).grid(row=0, column=0)
+                  text="Total", command=CostofItems).grid(row=0, column=0, sticky=W+E+N+S)
 btnReceipt = Button(fb2, padx=16, pady=1, bd=4, fg="black", font=('arial', 16, 'bold'), width=5,
-                    text="Receipt", command=Receipt).grid(row=0, column=1)
+                    text="Receipt", command=Receipt).grid(row=0, column=1, sticky=W+E+N+S)
 btnReset = Button(fb2, padx=16, pady=1, bd=4, fg="black", font=('arial', 16, 'bold'), width=5,
-                  text="Reset", command=Reset).grid(row=0, column=2)
+                  text="Reset", command=Reset).grid(row=0, column=2, sticky=W+E+N+S)
 btnExit = Button(fb2, padx=16, pady=1, bd=4, fg="black", font=('arial', 16, 'bold'), width=5,
-                 text="Exit", command=qExit).grid(row=0, column=3)
+                 text="Exit", command=qExit).grid(row=0, column=3, sticky=W+E+N+S)
 
 
 
