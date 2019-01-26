@@ -1,3 +1,8 @@
 # Adding Idea file to ignore
 
-/.Idea
+.idea/
+
+# Environments
+.venv/
+venv/
+env/
