@@ -1,4 +1,5 @@
 # Restaurant-Management-System
+
 Tkinter based project in Python. This application allows users to place orders
 & check receipt (bill).
 
